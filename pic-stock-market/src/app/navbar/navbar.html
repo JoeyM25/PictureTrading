@@ -1,0 +1,18 @@
+<mat-toolbar>
+  <button matIconButton [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item [routerLink]="['/leaderboard']">Leaderboard</button>
+      <button mat-menu-item [routerLink]="['/market']">Market</button>
+      <button mat-menu-item [routerLink]="['/portfolio']">Portfolio</button>
+    </mat-menu>
+  </button>
+  <span [routerLink]="['/home']">Meme Trader</span>
+  <span class="example-spacer"></span>
+  <button matIconButton class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button matIconButton class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
