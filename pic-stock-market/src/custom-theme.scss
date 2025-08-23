@@ -6,6 +6,13 @@
 // custom components at https://material.angular.dev/guide/theming
 @use '@angular/material' as mat;
 
+:root {
+  @include mat.toolbar-overrides((
+    container-background-color: #0A174E,
+    container-text-color: #F5D042,
+  ));
+}
+
 html {
   @include mat.theme((
     color: (
