@@ -1,0 +1,20 @@
+<mat-card class="meme-card" (click)="selectMeme()">
+    <mat-card-header>
+        <mat-card-title> {{meme.name}} </mat-card-title>
+        <mat-card-subtitle>
+            {{ meme.currentPrice | currency:'USD' }}
+            <span [ngClass]="{'text-green-600': meme.changePercent >= 0, 'text-red-600': meme.changePercent < 0}">
+                ({{meme.changePercent}}%)
+            </span>
+
+        </mat-card-subtitle>
+    </mat-card-header>
+
+    <img mat-card-image [src]="meme.imgUrl" [alt]="meme.name">
+
+    <mat-card-content>
+        <p>Open: {{ meme.open | currency:'USD' }}</p>
+        <p>High: {{ meme.high | currency:'USD' }}</p>
+        <p>Low: {{ meme.low | currency:'USD' }}</p>
+    </mat-card-content>
+</mat-card>

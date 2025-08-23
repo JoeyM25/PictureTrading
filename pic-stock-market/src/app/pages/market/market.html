@@ -1,1 +1,8 @@
-<p>market works!</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+    @for (meme of memes; track meme.name){
+    <app-meme-card
+        [meme]="meme"
+        (memeSelected)="showMemeDetails($event)">
+    </app-meme-card>
+    }
+</div>

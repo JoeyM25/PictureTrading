@@ -1,0 +1,7 @@
+.meme-card img{
+    max-height: 200px;
+    width: auto;
+    margin: 0 auto;
+    display: block;
+    object-fit: contain;
+}
